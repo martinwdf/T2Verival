@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bcopstein.ValidacaoHorarioComercialTest" time="1.316" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.bcopstein.ValidacaoHorarioComercialTest" time="1.771" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="15"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/martinferreira/Downloads/verival/Produto/target/surefire/surefirebooter14956845623118864055.jar /Users/martinferreira/Downloads/verival/Produto/target/surefire 2020-11-24T21-06-32_532-jvmRun1 surefire9941522161582540690tmp surefire_011518326186206111840tmp"/>
+    <property name="sun.java.command" value="/Users/martinferreira/Downloads/verival/Produto/target/surefire/surefirebooter18243036744021859401.jar /Users/martinferreira/Downloads/verival/Produto/target/surefire 2020-11-26T21-15-16_722-jvmRun1 surefire3821231120473698187tmp surefire_03590918370161742214tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/martinferreira/Downloads/verival/Produto/target/test-classes:/Users/martinferreira/Downloads/verival/Produto/target/classes:/Users/martinferreira/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/Users/martinferreira/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/martinferreira/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/martinferreira/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/Users/martinferreira/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/Users/martinferreira/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/Users/martinferreira/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.2/junit-jupiter-params-5.6.2.jar:/Users/martinferreira/.m2/repository/org/mockito/mockito-core/3.5.13/mockito-core-3.5.13.jar:/Users/martinferreira/.m2/repository/net/bytebuddy/byte-buddy/1.10.15/byte-buddy-1.10.15.jar:/Users/martinferreira/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.15/byte-buddy-agent-1.10.15.jar:/Users/martinferreira/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/martinferreira/Downloads/verival/Produto/target/surefire/surefirebooter14956845623118864055.jar"/>
+    <property name="surefire.real.class.path" value="/Users/martinferreira/Downloads/verival/Produto/target/surefire/surefirebooter18243036744021859401.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="15.0.1+9"/>
@@ -53,21 +53,21 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="validaTresProdutosExistentes" classname="com.bcopstein.ValidacaoHorarioComercialTest" time="1.261">
+  <testcase name="validaTresProdutosExistentes" classname="com.bcopstein.ValidacaoHorarioComercialTest" time="1.687">
     <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
 	at com.bcopstein.ValidacaoHorarioComercialTest.validaTresProdutosExistentes(ValidacaoHorarioComercialTest.java:33)
 Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
 	at com.bcopstein.ValidacaoHorarioComercialTest.lambda$validaTresProdutosExistentes$0(ValidacaoHorarioComercialTest.java:33)
 	at com.bcopstein.ValidacaoHorarioComercialTest.validaTresProdutosExistentes(ValidacaoHorarioComercialTest.java:33)
 ]]></failure>
-    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649.
+    <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -159,7 +159,7 @@ Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -172,14 +172,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
 	... 98 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649$auxiliary$qMGMcLID.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255$auxiliary$XCrp2a4a.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -271,7 +271,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649$auxiliary$qMGMcLID.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255$auxiliary$XCrp2a4a.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -284,14 +284,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
 	... 98 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649$auxiliary$fVCqVkBx.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255$auxiliary$D91Ptnkn.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -383,7 +383,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$105313649$auxiliary$fVCqVkBx.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Produtos$MockitoMock$1907607255$auxiliary$D91Ptnkn.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -396,14 +396,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
 	... 98 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -495,7 +495,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -508,14 +508,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
 	... 98 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397$auxiliary$F2NsQej6.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746$auxiliary$CYdJzjQu.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -607,7 +607,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397$auxiliary$F2NsQej6.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746$auxiliary$CYdJzjQu.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)
@@ -620,14 +620,14 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:75)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:107)
 	... 98 more
-java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397$auxiliary$RFfu5pOx.
+java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746$auxiliary$JKztNnLl.
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:246)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:563)
 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1016)
-	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$pgHLKd0D.defineClass(Unknown Source)
+	at java.base/java.lang.ClassLoader$ByteBuddyAccessor$FFXrs1KY.defineClass(Unknown Source)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -719,7 +719,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
-Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$657305397$auxiliary$RFfu5pOx.
+Caused by: java.io.IOException: Error while instrumenting com/bcopstein/Estoque$MockitoMock$195249746$auxiliary$JKztNnLl.
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrumentError(Instrumenter.java:159)
 	at org.jacoco.agent.rt.internal_43f5073.core.instr.Instrumenter.instrument(Instrumenter.java:109)
 	at org.jacoco.agent.rt.internal_43f5073.CoverageTransformer.transform(CoverageTransformer.java:92)

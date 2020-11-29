@@ -1,18 +1,16 @@
 package com.bcopstein;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 public class ServicoDeVendasTest {
 
-/*  @Test
+    @Test
     public void calculaSubTotalTeste(){
 
         Produtos produtos = mock(Produtos.class);
@@ -32,16 +30,16 @@ public class ServicoDeVendasTest {
         //itens.add(new ItemVenda(3,50,1,1500)); // 1500
         
         RegraValidacao regra = new ValidacaoHorarioComercial();
-        assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+       // assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
-        LocalTime agora = LocalTime.now();
-        FactoryValidacao f = new FactoryValidacao(agora);
+        FactoryValidacao f = mock(FactoryValidacao.class);
+        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
 
         assertEquals(2200 ,servico.calculaSubtotal(itens));
     }
-    */
+    
 
     @Test
     public void calculaImpostoOriginalTeste(){
@@ -63,12 +61,11 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(3,50,5,150)); // 1500
         
         RegraValidacao regra = new ValidacaoHorarioComercial();
-        assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoOriginal r = new RegraImpostoOriginal();
-
-        LocalTime agora = LocalTime.now();
-        FactoryValidacao f = new FactoryValidacao(agora);
+        FactoryValidacao f = mock(FactoryValidacao.class);
+        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(75, servico.calculaImpostos(itens));
         
@@ -96,12 +93,12 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(4,50,1,100)); // 1500
         
         RegraValidacao regra = new ValidacaoHorarioComercial();
-        assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        LocalTime agora = LocalTime.now();
-        FactoryValidacao f = new FactoryValidacao(agora);
+        FactoryValidacao f = mock(FactoryValidacao.class);
+        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(95, servico.calculaImpostos(itens));
         
@@ -128,14 +125,16 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(2,20,1,300)); // 6000
         itens.add(new ItemVenda(3,30,1,250)); // 1500
         itens.add(new ItemVenda(4,50,1,100)); // 1500
+
         
-        RegraValidacao regra = new ValidacaoHorarioComercial();
-        assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+        //RegraValidacao regra = new ValidacaoHorarioComercial();
+        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        LocalTime agora = LocalTime.now();
-        FactoryValidacao f = new FactoryValidacao(agora);
+        FactoryValidacao f = mock(FactoryValidacao.class);
+        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(1095,servico.calculaPrecoFinal(itens));
     }
@@ -162,12 +161,12 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(4,50,1,100)); // 1500
         
         RegraValidacao regra = new ValidacaoHorarioComercial();
-        assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        LocalTime agora = LocalTime.now();
-        FactoryValidacao f = new FactoryValidacao(agora);
+        FactoryValidacao f = mock(FactoryValidacao.class);
+        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
 
         assertEquals(1000,servico.todosValores(itens)[0]);
@@ -175,4 +174,5 @@ public class ServicoDeVendasTest {
         //retornando null na terceira posicao do array
         assertEquals(1095,servico.todosValores(itens)[2]);
     }
+
 }

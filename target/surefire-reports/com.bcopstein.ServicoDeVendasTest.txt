@@ -1,32 +1,36 @@
 -------------------------------------------------------------------------------
 Test set: com.bcopstein.ServicoDeVendasTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.037 s <<< FAILURE! - in com.bcopstein.ServicoDeVendasTest
-com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste  Time elapsed: 0.006 s  <<< FAILURE!
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.285 s <<< FAILURE! - in com.bcopstein.ServicoDeVendasTest
+com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste  Time elapsed: 0.016 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste(ServicoDeVendasTest.java:165)
+	at com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste(ServicoDeVendasTest.java:166)
 Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.lambda$TodosOsValoresTeste$3(ServicoDeVendasTest.java:165)
-	at com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste(ServicoDeVendasTest.java:165)
+	at com.bcopstein.ServicoDeVendasTest.lambda$3(ServicoDeVendasTest.java:166)
+	at com.bcopstein.ServicoDeVendasTest.TodosOsValoresTeste(ServicoDeVendasTest.java:166)
 
-com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste  Time elapsed: 0.006 s  <<< FAILURE!
+com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste  Time elapsed: 0.021 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste(ServicoDeVendasTest.java:99)
+	at com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste(ServicoDeVendasTest.java:98)
 Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.lambda$calculaImpostoGrandeTeste$1(ServicoDeVendasTest.java:99)
-	at com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste(ServicoDeVendasTest.java:99)
+	at com.bcopstein.ServicoDeVendasTest.lambda$2(ServicoDeVendasTest.java:98)
+	at com.bcopstein.ServicoDeVendasTest.calculaImpostoGrandeTeste(ServicoDeVendasTest.java:98)
 
-com.bcopstein.ServicoDeVendasTest.calculaPrecoFinalTeste  Time elapsed: 0.008 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.calculaPrecoFinalTeste(ServicoDeVendasTest.java:133)
-Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.lambda$calculaPrecoFinalTeste$2(ServicoDeVendasTest.java:133)
-	at com.bcopstein.ServicoDeVendasTest.calculaPrecoFinalTeste(ServicoDeVendasTest.java:133)
+com.bcopstein.ServicoDeVendasTest.calculaPrecoFinalTeste  Time elapsed: 0.227 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1095> but was: <1047>
+	at com.bcopstein.ServicoDeVendasTest.calculaPrecoFinalTeste(ServicoDeVendasTest.java:141)
 
-com.bcopstein.ServicoDeVendasTest.calculaImpostoOriginalTeste  Time elapsed: 0.006 s  <<< FAILURE!
+com.bcopstein.ServicoDeVendasTest.calculaImpostoOriginalTeste  Time elapsed: 0.007 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
 	at com.bcopstein.ServicoDeVendasTest.calculaImpostoOriginalTeste(ServicoDeVendasTest.java:66)
 Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
-	at com.bcopstein.ServicoDeVendasTest.lambda$calculaImpostoOriginalTeste$0(ServicoDeVendasTest.java:66)
+	at com.bcopstein.ServicoDeVendasTest.lambda$1(ServicoDeVendasTest.java:66)
 	at com.bcopstein.ServicoDeVendasTest.calculaImpostoOriginalTeste(ServicoDeVendasTest.java:66)
+
+com.bcopstein.ServicoDeVendasTest.calculaSubTotalTeste  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
+	at com.bcopstein.ServicoDeVendasTest.calculaSubTotalTeste(ServicoDeVendasTest.java:35)
+Caused by: com.bcopstein.SistVendasException: QUANTIDADE_INSUFICIENTE
+	at com.bcopstein.ServicoDeVendasTest.lambda$0(ServicoDeVendasTest.java:35)
+	at com.bcopstein.ServicoDeVendasTest.calculaSubTotalTeste(ServicoDeVendasTest.java:35)
 
