@@ -20,19 +20,19 @@ public class ValidacaoHorarioComercialTest {
         when(produtos.recupera(50)).thenReturn(new Produto(50,"Prod15",1500.0));
 
         Estoque estoque = mock(Estoque.class);
-        when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,5));
-        when(estoque.recupera(30)).thenReturn(new ItemEstoque(30,3));
-        when(estoque.recupera(50)).thenReturn(new ItemEstoque(50,15));
+        when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,50));
+        when(estoque.recupera(30)).thenReturn(new ItemEstoque(30,30));
+        when(estoque.recupera(50)).thenReturn(new ItemEstoque(50,150));
 
         List<ItemVenda> itens = new ArrayList<>(3);
-        itens.add(new ItemVenda(1,10,2,1000));
-        itens.add(new ItemVenda(2,30,3,2000));
+        itens.add(new ItemVenda(1,10,10,1000));
+        itens.add(new ItemVenda(2,30,2,2000));
         itens.add(new ItemVenda(3,50,1,1500));
 
         RegraValidacao regra = new ValidacaoHorarioComercial();
+       // RegraValidacao regra = new ValidacaoForaHorarioComercial();
         assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
-
-
+        
 
 
     }

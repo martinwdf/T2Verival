@@ -1,102 +1,32 @@
 package com.bcopstein;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-public class ServicoDeVendasTest {
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
+
+public class ServicosVendasIntegradosTest {
 
 
     @Test
-    public void validaTodosValidosTest(){
-        Produtos produtos = mock(Produtos.class);
-        when(produtos.recupera(10)).thenReturn(new Produto(10,"Prod10",1000.0));
-        when(produtos.recupera(30)).thenReturn(new Produto(30,"Prod30",2000.0));
-        when(produtos.recupera(50)).thenReturn(new Produto(50,"Prod15",1500.0));
 
-        Estoque estoque = mock(Estoque.class);
-        when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,50));
-        when(estoque.recupera(30)).thenReturn(new ItemEstoque(30,30));
-        when(estoque.recupera(50)).thenReturn(new ItemEstoque(50,150));
-
-        List<ItemVenda> itens = new ArrayList<>(3);
-        itens.add(new ItemVenda(1,10,10,1000));
-        itens.add(new ItemVenda(2,30,2,2000));
-        itens.add(new ItemVenda(3,50,1,1500));   
-
+    public void ValidaTest(){
         
-        
-        RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
-        ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
-        assertDoesNotThrow(()->servico.valida(itens));
-
     }
-    @Test
-    public void validaProdutoCodigoInvalidoTest(){
-        Produtos produtos = mock(Produtos.class);
-        when(produtos.recupera(10)).thenReturn(new Produto(1,"Prod10",1000.0));
-        when(produtos.recupera(30)).thenReturn(new Produto(30,"Prod30",2000.0));
-        when(produtos.recupera(50)).thenReturn(new Produto(50,"Prod15",1500.0));
-
-        Estoque estoque = mock(Estoque.class);
-        when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,50));
-        when(estoque.recupera(30)).thenReturn(new ItemEstoque(30,30));
-        when(estoque.recupera(50)).thenReturn(new ItemEstoque(50,150));
-
-        List<ItemVenda> itens = new ArrayList<>(3);
-        itens.add(new ItemVenda(1,10,10,1000));
-        itens.add(new ItemVenda(2,30,2,2000));
-        itens.add(new ItemVenda(3,50,1,1500));   
-
-        
-       // assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
-
-        RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
-        ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
-        Assertions.assertThrows(SistVendasException.class, ()->{
-            servico.valida(itens);
-        });
-
-    }
-    @Test
-    public void validaQuantidadeInsuficienteTest(){
-        Produtos produtos = mock(Produtos.class);
-        when(produtos.recupera(10)).thenReturn(new Produto(10,"Prod10",1000.0));
-
-        Estoque estoque = mock(Estoque.class);
-        when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,49));
-
-        List<ItemVenda> itens = new ArrayList<>(3);
-        itens.add(new ItemVenda(1,10,50,1000));
-
-        RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
-        ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
-        Assertions.assertThrows(SistVendasException.class, () -> {
-            servico.valida(itens);
-          });
-    }
-
     @Test
     public void calculaSubTotalTeste(){
 
         Produtos produtos = mock(Produtos.class);
-
         when(produtos.recupera(10)).thenReturn(new Produto(10,"Prod10",1100.0));
-        //when(produtos.recupera(30)).thenReturn(new Produto(30,"Prod30",2000.0));
-        //when(produtos.recupera(50)).thenReturn(new Produto(50,"Prod15",1500.0));
+        when(produtos.recupera(30)).thenReturn(new Produto(30,"Prod30",2000.0));
+        when(produtos.recupera(50)).thenReturn(new Produto(50,"Prod15",1500.0));
         
         Estoque estoque = mock(Estoque.class);
         when(estoque.recupera(10)).thenReturn(new ItemEstoque(10,50));
@@ -104,16 +34,14 @@ public class ServicoDeVendasTest {
         //when(estoque.recupera(50)).thenReturn(new ItemEstoque(50,15));
 
         List<ItemVenda> itens = new ArrayList<>(3);
-        itens.add(new ItemVenda(1,10,2,2200)); // 2000
-        //itens.add(new ItemVenda(2,30,3,2000)); // 6000
-        //itens.add(new ItemVenda(3,50,1,1500)); // 1500
-        
-        RegraValidacao regra = new ValidacaoHorarioComercial();
-       // assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
+        itens.add(new ItemVenda(1,10,1,2200)); // 2000
+       // itens.add(new ItemVenda(2,30,3,2000)); // 6000
+       // itens.add(new ItemVenda(3,50,1,1500)); // 1500
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+
+        LocalTime agora = LocalTime.now();
+        FactoryValidacao f = new FactoryValidacao(agora);
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
 
         assertEquals(2200 ,servico.calculaSubtotal(itens));
@@ -138,13 +66,10 @@ public class ServicoDeVendasTest {
         //itens.add(new ItemVenda(1,10,3,300)); // 2000
         //itens.add(new ItemVenda(2,30,6,300)); // 6000
         itens.add(new ItemVenda(3,50,5,750)); // 1500
-        
-        RegraValidacao regra = new ValidacaoHorarioComercial();
-        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoOriginal r = new RegraImpostoOriginal();
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+        LocalTime agora = LocalTime.now();
+        FactoryValidacao f = new FactoryValidacao(agora);
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(75, servico.calculaImpostos(itens));
         
@@ -170,14 +95,11 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(2,20,1,300)); // 6000
         itens.add(new ItemVenda(3,30,1,250)); // 1500
         itens.add(new ItemVenda(4,50,1,100)); // 1500
-        
-        RegraValidacao regra = new ValidacaoHorarioComercial();
-        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+        LocalTime agora = LocalTime.now();
+        FactoryValidacao f = new FactoryValidacao(agora);
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(95, servico.calculaImpostos(itens));
         
@@ -205,14 +127,10 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(3,30,1,250)); // 1500
         itens.add(new ItemVenda(4,50,1,100)); // 1500
 
-        
-        //RegraValidacao regra = new ValidacaoHorarioComercial();
-        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
-
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+        LocalTime agora = LocalTime.now();
+        FactoryValidacao f = new FactoryValidacao(agora);
 
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
         assertEquals(1095,servico.calculaPrecoFinal(itens));
@@ -238,14 +156,11 @@ public class ServicoDeVendasTest {
         itens.add(new ItemVenda(2,20,1,300)); // 6000
         itens.add(new ItemVenda(3,30,1,250)); // 1500
         itens.add(new ItemVenda(4,50,1,100)); // 1500
-        
-        RegraValidacao regra = new ValidacaoHorarioComercial();
-        //assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
 
         RegraImpostoComprasGrandes r = new RegraImpostoComprasGrandes();
 
-        FactoryValidacao f = mock(FactoryValidacao.class);
-        when(f.getRegraValidacao()).thenReturn(new ValidacaoHorarioComercial());
+        LocalTime agora = LocalTime.now();
+        FactoryValidacao f = new FactoryValidacao(agora);
         ServicoDeVendas servico = new ServicoDeVendas(produtos, estoque, r, f);
 
        // assertEquals(1000,servico.todosValores(itens)[0]);
@@ -253,9 +168,9 @@ public class ServicoDeVendasTest {
         //retornando null na terceira posicao do array
         //assertEquals(1095,servico.todosValores(itens)[2]);
         Integer[] array = {1000, 95, 1095};
-        
-
         assertArrayEquals(array, servico.todosValores(itens));
     }
 
+
 }
+
